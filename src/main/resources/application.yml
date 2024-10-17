@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: wishlist
+
+server:
+  port: 8080
+  shutdown: graceful
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /
