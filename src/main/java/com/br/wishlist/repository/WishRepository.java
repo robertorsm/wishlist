@@ -10,7 +10,9 @@ import java.util.List;
 public interface WishRepository extends MongoRepository<Wish, String> {
     List<Wish> findAllByCustomerId(Long customerId);
 
-    void deleteByProductIdAndAndCustomerId(Long productId, Long customerId);
+    void deleteByProductIdAndCustomerId(Long productId, Long customerId);
 
     Boolean existsByProductIdAndCustomerId(Long productId, Long customerId);
+
+    Integer countByCustomerId(Long customerId);
 }

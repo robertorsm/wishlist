@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -31,11 +32,12 @@ public interface WishApi {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Created"),
             @ApiResponse(responseCode = "400", description = "Bad Request", content = @Content(mediaType = "application/json")),
+            @ApiResponse(responseCode = "401", description = "Unauthorized", content = @Content(mediaType = "application/json")),
             @ApiResponse(responseCode = "500", description = "Service error", content = @Content(mediaType = "application/json"))
     })
     @PostMapping("/wishes")
     @ResponseStatus(HttpStatus.CREATED)
-    void createWish(@RequestBody final WishRecord wish);
+    void createWish(@Valid @RequestBody final WishRecord wish);
 
 
     @Operation(summary = "Delete a wish")

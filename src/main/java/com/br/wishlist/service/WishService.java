@@ -1,5 +1,6 @@
 package com.br.wishlist.service;
 
+import com.br.wishlist.exception.UnauthorizedException;
 import com.br.wishlist.model.Wish;
 import com.br.wishlist.records.WishRecord;
 import com.br.wishlist.repository.WishRepository;
@@ -13,19 +14,28 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class WishService {
+    private static final Integer MAX_LIMIT = 20;
+
 
     private final WishRepository wishRepository;
+
 
     public List<WishRecord> getAllWishesByCustomerId(Long customerId) {
         return wishRepository.findAllByCustomerId(customerId).stream().map(Wish::documentToRecord).toList();
     }
 
     public void createWish(WishRecord wish) {
-        wishRepository.save(wish.toDocument());
+        Integer count = wishRepository.countByCustomerId(wish.customerId());
+        if(count<=MAX_LIMIT){
+            wishRepository.save(wish.toDocument());
+        }else {
+            throw new UnauthorizedException("Customer has reach the max limit of items in wish list!");
+        }
+
     }
 
     public void deleteWish(Long productId, Long customerId) {
-        wishRepository.deleteByProductIdAndAndCustomerId(productId, customerId);
+        wishRepository.deleteByProductIdAndCustomerId(productId, customerId);
     }
 
     public Boolean existsByProductIdAndCustomerId(Long productId, Long customerId) {

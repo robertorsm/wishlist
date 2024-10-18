@@ -1,15 +1,16 @@
 package com.br.wishlist.records;
 
 import com.br.wishlist.model.Wish;
+import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 
-public record WishRecord( Long productId,
-                          Long customerId,
-                          String title,
-                          String description,
-                          BigDecimal price,
-                          String url,
+public record WishRecord( @NotNull Long productId,
+                          @NotNull Long customerId,
+                          @NotNull String title,
+                          @NotNull String description,
+                          @NotNull BigDecimal price,
+                          @NotNull String url,
                           Long quantity) {
 
     public Wish toDocument() {
