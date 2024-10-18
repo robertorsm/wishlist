@@ -1,7 +1,10 @@
 spring:
   application:
     name: wishlist
-
+  data:
+    mongodb:
+      auto-index-creation: true
+      uri: ${MONGO_DB_URI:mongodb://localhost:27017/wish_list}
 server:
   port: 8080
   shutdown: graceful

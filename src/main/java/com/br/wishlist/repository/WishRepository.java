@@ -7,7 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface WishRepository extends MongoRepository<Wish, Long> {
+public interface WishRepository extends MongoRepository<Wish, String> {
+    List<Wish> findAllByCustomerId(Long customerId);
 
-    List<Wish> findAllBy(Long id);
+    void deleteByProductIdAndAndCustomerId(Long productId, Long customerId);
+
+    Boolean existsByProductIdAndCustomerId(Long productId, Long customerId);
 }
