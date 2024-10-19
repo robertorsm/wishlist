@@ -32,7 +32,7 @@ public interface WishApi {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Created"),
             @ApiResponse(responseCode = "400", description = "Bad Request", content = @Content(mediaType = "application/json")),
-            @ApiResponse(responseCode = "401", description = "Unauthorized", content = @Content(mediaType = "application/json")),
+            @ApiResponse(responseCode = "429", description = "Too Many Requests", content = @Content(mediaType = "application/json")),
             @ApiResponse(responseCode = "500", description = "Service error", content = @Content(mediaType = "application/json"))
     })
     @PostMapping("/wishes")
