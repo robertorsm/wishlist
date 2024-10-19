@@ -1,6 +1,6 @@
 package com.br.wishlist.service;
 
-import com.br.wishlist.exception.UnauthorizedException;
+import com.br.wishlist.exception.TooManyRequestsException;
 import com.br.wishlist.model.Wish;
 import com.br.wishlist.records.WishRecord;
 import com.br.wishlist.repository.WishRepository;
@@ -29,7 +29,7 @@ public class WishService {
         if(count<=MAX_LIMIT){
             wishRepository.save(wish.toDocument());
         }else {
-            throw new UnauthorizedException("Customer has reach the max limit of items in wish list!");
+            throw new TooManyRequestsException("Customer has reach the max limit of items in wish list!");
         }
 
     }

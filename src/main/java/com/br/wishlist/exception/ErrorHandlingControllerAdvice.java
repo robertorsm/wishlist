@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ErrorHandlingControllerAdvice {
 
-   @ExceptionHandler(UnauthorizedException.class)
-   public ResponseEntity<ErrorResponse> handleUnauthorizedException(final UnauthorizedException ex) {
+   @ExceptionHandler(TooManyRequestsException.class)
+   public ResponseEntity<ErrorResponse> handleUnauthorizedException(final TooManyRequestsException ex) {
        ErrorResponse message = ErrorResponse.builder()
-               .statusCode(HttpStatus.UNAUTHORIZED.value())
+               .statusCode(HttpStatus.TOO_MANY_REQUESTS.value())
                .msg(ex.getMessage())
                .build();
-       return new ResponseEntity<>(message, HttpStatus.UNAUTHORIZED);
+       return new ResponseEntity<>(message, HttpStatus.TOO_MANY_REQUESTS);
    }
 
 }
