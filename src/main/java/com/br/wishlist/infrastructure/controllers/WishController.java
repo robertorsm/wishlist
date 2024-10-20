@@ -8,6 +8,7 @@ import com.br.wishlist.infrastructure.controllers.mappers.WishDTOMapper;
 import com.br.wishlist.infrastructure.controllers.requests.WishRequest;
 import com.br.wishlist.infrastructure.controllers.responses.WishResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,7 +33,7 @@ public class WishController implements WishApi {
     public ResponseEntity<WishResponse> createWish(WishRequest wishRequest) {
         Wish wish = wishDTOMapper.toDomain(wishRequest);
         WishResponse wishResponse = wishDTOMapper.toResponse(wishUseCase.createWish(wish));
-        return ResponseEntity.ok(wishResponse);
+        return new ResponseEntity<>(wishResponse, HttpStatus.CREATED);
     }
 
     @Override
