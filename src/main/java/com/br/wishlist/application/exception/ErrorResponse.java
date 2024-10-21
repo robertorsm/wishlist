@@ -1,4 +1,4 @@
-package com.br.wishlist.exception;
+package com.br.wishlist.application.exception;
 
 
 import lombok.AllArgsConstructor;
