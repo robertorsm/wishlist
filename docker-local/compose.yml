@@ -10,6 +10,6 @@ services:
     networks:
       - app-tier
     environment:
-      - ALLOW_EMPTY_PASSWORD=yes
+      - ALLOW_EMPTY_PASSWORD=yes # Apenas para uso em dev.
     ports:
       - "27017:27017"

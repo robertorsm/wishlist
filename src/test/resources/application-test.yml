@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      database: test
+      database: wish_list_test
       port: 27018
 de:
   flapdoodle:
