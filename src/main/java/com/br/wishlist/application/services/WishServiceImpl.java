@@ -20,7 +20,7 @@ public class WishServiceImpl implements WishUseCase {
 
     public Wish createWish(Wish wish) {
         Integer count = wishGateway.countByCustomerId(wish.customerId());
-        if(count<=MAX_LIMIT){
+        if(count<MAX_LIMIT){
             return wishGateway.createWish(wish);
         }else {
             throw new TooManyRequestsException("Customer has reach the max limit of items in wish list!");
