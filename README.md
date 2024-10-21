@@ -30,4 +30,8 @@ $ mvn clean install
 # Rodando a partir do jar
 $ java -jar target/wishlist-0.0.1-SNAPSHOT.jar
 ```
+
+## Acessando a documentação da API
+- Após a aplicação estiver executando o Swagger estará disponível na porta `http://localhost:8080/swagger-ui/index.html`.
+
  
