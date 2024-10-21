@@ -24,3 +24,10 @@ $ mvn clean install
 
 ## Execução
  - Dentro da pasta docker-local tem um `compose.yml` que foi usado para subir o mongoDB, para fins de agilidade não foram configuradas credenciais para o database.
+ - Depois da instância do mongo rodando basta rodar a aplicação em alguma IDE de preferência ou rodar o jar diretamente, para isso após o `mvn clean install` basta rodar o comando abaixo a partir da raiz do projeto:
+
+```sh
+# Rodando a partir do jar
+$ java -jar target/wishlist-0.0.1-SNAPSHOT.jar
+```
+ 
