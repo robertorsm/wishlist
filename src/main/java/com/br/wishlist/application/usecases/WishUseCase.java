@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface WishUseCase {
 
-    List<Wish> getAllWishesByCustomerId(Long customerId);
+    List<Wish> getAllWishesByCustomerId(Long customerId,Integer page, Integer size);
     Wish createWish(Wish wish);
     void deleteWishByProductIdAndCustomerId(Long productId, Long customerId);
     Boolean existsByProductIdAndCustomerId(Long productId, Long customerId);

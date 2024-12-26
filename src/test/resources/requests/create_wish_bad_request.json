@@ -3,7 +3,5 @@
   "customerId": null,
   "title": null,
   "description": null,
-  "price": null,
-  "url": null,
-  "quantity": 1
+  "url": null
 }

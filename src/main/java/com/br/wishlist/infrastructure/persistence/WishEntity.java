@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigDecimal;
 
 @Document(collection = "wish_list")
-@CompoundIndex(def = "{'productId': 1, 'customerId': 1}", unique = true)
+@CompoundIndex(def = "{'customerId': 1, 'productId': 1}", unique = true)
 @Data
 @Builder
 public class WishEntity {

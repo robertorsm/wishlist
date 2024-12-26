@@ -6,11 +6,11 @@ import com.br.wishlist.infrastructure.persistence.WishEntity;
 import com.br.wishlist.infrastructure.persistence.WishRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Slf4j
 @Service
 @RequiredArgsConstructor
 public class WishRepositoryGateway implements WishGateway {
@@ -18,8 +18,8 @@ public class WishRepositoryGateway implements WishGateway {
     private final WishEntityMapper wishEntityMapper;
 
     @Override
-    public List<Wish> getAllWishesByCustomerId(Long customerId) {
-        return wishRepository.findAllByCustomerId(customerId).stream()
+    public List<Wish> getAllWishesByCustomerId(Long customerId, Pageable pageable) {
+        return wishRepository.findAllByCustomerId(customerId,pageable).stream()
                 .map(wishEntityMapper::documentToDomain).toList();
     }
 

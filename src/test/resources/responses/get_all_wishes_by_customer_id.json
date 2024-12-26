@@ -4,179 +4,139 @@
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 2,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 3,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 4,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 5,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 6,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 7,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 8,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 9,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 10,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 11,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 12,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 13,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 14,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 15,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 16,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 17,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 18,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 19,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   },
   {
     "productId": 20,
     "customerId": 1,
     "title": "teste",
     "description": "teste",
-    "price": 3000,
-    "url": "teste",
-    "quantity": 1
+    "url": "teste"
   }
 ]

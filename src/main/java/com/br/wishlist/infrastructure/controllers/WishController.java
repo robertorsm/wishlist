@@ -23,8 +23,8 @@ public class WishController implements WishApi {
     private final WishUseCase wishUseCase;
 
     @Override
-    public ResponseEntity<List<WishResponse>> getAllWishesByCustomerId(Long customerId) {
-        List<WishResponse> wishResponses = wishUseCase.getAllWishesByCustomerId(customerId).stream()
+    public ResponseEntity<List<WishResponse>> getAllWishesByCustomerId(Long customerId, Integer page, Integer size) {
+        List<WishResponse> wishResponses = wishUseCase.getAllWishesByCustomerId(customerId,page,size).stream()
                 .map(wishDTOMapper::toResponse).toList();
         return ResponseEntity.ok(wishResponses);
     }

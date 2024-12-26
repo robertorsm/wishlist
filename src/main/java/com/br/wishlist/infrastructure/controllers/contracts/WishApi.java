@@ -23,11 +23,15 @@ public interface WishApi {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Ok", content = @Content(mediaType = "application/json")),
             @ApiResponse(responseCode = "400", description = "Bad Request", content = @Content(mediaType = "application/json")),
+            @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "application/json")),
             @ApiResponse(responseCode = "500", description = "Service error", content = @Content(mediaType = "application/json"))
     })
     @GetMapping("/wishes/{customerId}")
     @ResponseStatus(HttpStatus.OK)
-    ResponseEntity<List<WishResponse>> getAllWishesByCustomerId(@PathVariable @Parameter(description = "customerId") Long customerId);
+    ResponseEntity<List<WishResponse>> getAllWishesByCustomerId(
+            @PathVariable @Parameter(description = "customerId") Long customerId,
+            @RequestParam(defaultValue = "0") Integer page,
+            @RequestParam(defaultValue = "10") Integer size);
 
     @Operation(summary = "Create a wish")
     @Tag(name = "CREATE", description = "Create a new wish in customerId wish-list")

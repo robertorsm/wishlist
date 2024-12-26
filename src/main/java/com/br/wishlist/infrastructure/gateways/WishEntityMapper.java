@@ -12,9 +12,7 @@ public class WishEntityMapper {
                 .customerId(wish.customerId())
                 .title(wish.title())
                 .description(wish.description())
-                .price(wish.price())
                 .url(wish.url())
-                .quantity(wish.quantity())
                 .build();
     }
 
@@ -23,8 +21,6 @@ public class WishEntityMapper {
                 wishEntity.getCustomerId(),
                 wishEntity.getTitle(),
                 wishEntity.getDescription(),
-                wishEntity.getPrice(),
-                wishEntity.getUrl(),
-                wishEntity.getQuantity());
+                wishEntity.getUrl());
     }
 }

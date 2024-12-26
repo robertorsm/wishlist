@@ -13,9 +13,7 @@ public class WishDTOMapper {
                                 wish.customerId(),
                                 wish.title(),
                                 wish.description(),
-                                wish.price(),
-                                wish.url(),
-                                wish.quantity());
+                                wish.url());
     }
 
     public Wish toDomain(WishRequest wishRequest){
@@ -23,8 +21,6 @@ public class WishDTOMapper {
                         wishRequest.customerId(),
                         wishRequest.title(),
                         wishRequest.description(),
-                        wishRequest.price(),
-                        wishRequest.url(),
-                        wishRequest.quantity());
+                        wishRequest.url());
     }
 }

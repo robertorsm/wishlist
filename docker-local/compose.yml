@@ -1,9 +1,4 @@
 version: '2'
-
-networks:
-  app-tier:
-    driver: bridge
-
 services:
   mongodb:
     image: 'bitnami/mongodb:latest'
@@ -13,3 +8,7 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes # Apenas para uso em dev.
     ports:
       - "27017:27017"
+      -
+networks:
+  app-tier:
+    driver: bridge
